@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}DashBoard{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+</head>
+<body>
+	<div class="prlist">
+		<a href="{% url 'dash:audio' %}" class="button">Audio</a>
+		<a href="{% url 'dash:display' %}" class="button">Display</a>
+		<a href="{% url 'dash:video' %}" class="button">Video</a>
+		<a href="{% url 'dash:audio' %}" class="button">Example</a>
+	</div>
+	<div id="content">
+		{% block content %}
+		{% endblock %}
+	</div>
+</body>
+</html>

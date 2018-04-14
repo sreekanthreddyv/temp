@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Video
+{% endblock %}
+
+{% block content %}
+	<div class="files">
+		<form method="post">
+            {% csrf_token %}
+			<input type="checkbox" name="script" value="First.py">1_Video<br>
+			<input type="checkbox" name="script" value="Second.py" checked>2_Video<br>
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+    <div class="result">
+        {% if data %}
+            <table border="2">
+                {% for key, value in data.items %}
+                    <tr>
+                        <td>{{ key }}</td>
+                        {% if value %}
+                            <td style="color: green">Pass</td>
+                        {% else %}
+                            <td style="color: red">Fail</td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+    </div>
+{% endblock %}

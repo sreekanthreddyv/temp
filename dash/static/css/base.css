@@ -1,0 +1,31 @@
+.button {
+  background-color: ForestGreen;  
+  border-radius: 5px;
+  color: white;
+  padding: .5em;
+  text-decoration: none;
+}
+
+.button:focus,
+.button:hover {
+  background-color: DarkGreen;
+}
+
+.files{
+	margin: 20px;
+}
+
+.checkboxFour {
+    width: 40px;
+    height: 40px;
+    background: #ddd;
+    margin: 20px 90px;
+
+    border-radius: 100%;
+    position: relative;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+.checkboxFour input[type=checkbox]:checked + label {
+    background: #26ca28;
+}
